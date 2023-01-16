@@ -6,7 +6,7 @@ Configura o apache pra rodar scripts PHP
 
 #### Instalar dependencias
 ```
-apt update && apt install nano php php-apache phpmyadmin mariadb -y
+apt update && apt install nano apache2 php php-apache phpmyadmin mariadb -y
 ```
 
 ### Etapa 2
