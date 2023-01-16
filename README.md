@@ -2,7 +2,7 @@
 Configura o apache pra rodar scripts PHP
 
 ### Etapa 1:
-![mpm](https://github.com/Olliv3r/Web-Server/blob/main/media/php-main.jpg)
+![mpm](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-main.jpg)
 
 #### Instalar dependencias
 ```
@@ -19,14 +19,14 @@ Com o arquivo aberto, digite `ctr+w` e pesquise essa linha e descomente ela:
 > LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
 
 Ficando assim:
-![Carregar biblioteca mod_mpm_prefork.iso](https://github.com/Olliv3r/Web-Server/blob/main/media/php-prefork-module.jpg)
+![Carregar biblioteca mod_mpm_prefork.iso](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-prefork-module.jpg)
 
 
 Digite `ctr+w` e pesquise essa linha e comente ela:
 > LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
 
 Ficando assim:
-![Desativar biblioteca mod_mpm_worker.so](https://github.com/Olliv3r/Web-Server/blob/main/media/php-worker-module.jpg)
+![Desativar biblioteca mod_mpm_worker.so](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-worker-module.jpg)
 
 Digite `ctr+w` e pesquise essa linha:
 > LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
@@ -36,7 +36,7 @@ Acima dessa linha, adicione uma nova linha com este comando:
 LoadModule php_module libexec/apache2/libphp.so
 ```
 Ficando assim:
-![Carregar biblioteca libphp.so](https://github.com/Olliv3r/Web-Server/blob/main/media/php-php_module.jpg)
+![Carregar biblioteca libphp.so](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-php_module.jpg)
 
 Digite `ctr+w` e pesquise essa linha:
 > &lt;IfModule ssl_module>
@@ -49,7 +49,7 @@ Abaixo do bloco nessa linha, adicione uma nova linha e cole esse bloco de comand
 ```
 
 Ficando assim:
-![Definir o manipulador](https://github.com/Olliv3r/Web-Server/blob/main/media/php-ifmodule.jpg)
+![Definir o manipulador](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-ifmodule.jpg)
 
 Digite `ctr+w` e pesquise essa linha:
 > Include etc/apache2/conf.d/*.conf
@@ -60,7 +60,7 @@ Include etc/apache2/extra/php_module.conf
 ```
 
 Ficando assim:
-![Incluir modulo php_module.conf](https://github.com/Olliv3r/Web-Server/blob/main/media/php-php_module.conf.jpg)
+![Incluir modulo php_module.conf](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-php_module.conf.jpg)
 
 Salve este arquivo digitando `ctr+x+y` e enter
 
@@ -87,14 +87,14 @@ phpinfo();
 ?>
 ```
 Ficando assim:
-![phpinfo();](https://github.com/Olliv3r/Web-Server/blob/main/media/php-phpinfo().jpg)
+![phpinfo();](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-phpinfo().jpg)
 
 Salve o arquivo digitando `ctr+x+y` e enter
 
 Inicie o apache2 com `apachectl -k start`, abra o link `http://localhost:8080` e clica no index.php que aparecerá no navegador
 
 #### Carregar o index.php por padrão
-![Index.html](https://github.com/Olliv3r/Web-Server/blob/main/media/php-index.html.jpg)
+![Index.html](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-index.html.jpg)
 
 Pra fazer com que o php carregue o index.php por padrão, segue esses passos
 
@@ -107,7 +107,7 @@ nano $PREFIX/etc/apache2/httpd.conf
 > DirectoryIndex index.html
 
 Nessa linha substitua a extensão `.html` por `.php` ficando assim:
-![Carregar index.php por padrão](https://github.com/Olliv3r/Web-Server/blob/main/media/php-index.php.jpg)
+![Carregar index.php por padrão](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-index.php.jpg)
 
 Terminamos com esse arquivo, salve digitando `ctr+x+y` e enter
 
