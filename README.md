@@ -19,14 +19,14 @@ Com o arquivo aberto, digite `ctr+w` e pesquise essa linha e descomente ela:
 > LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
 
 Ficando assim:
-![Carregar biblioteca mod_mpm_prefork.iso](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php_prefork_module.jpg)
+![Carregar biblioteca mod_mpm_prefork.iso](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php_mpm_prefork_module.jpg)
 
 
 Digite `ctr+w` e pesquise essa linha e comente ela:
 > LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
 
 Ficando assim:
-![Desativar biblioteca mod_mpm_worker.so](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-worker-module.jpg)
+![Desativar biblioteca mod_mpm_worker.so](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-mpm-worker-module.jpg)
 
 Digite `ctr+w` e pesquise essa linha:
 > LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
