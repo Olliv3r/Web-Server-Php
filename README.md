@@ -2,7 +2,7 @@
 Configura o apache pra rodar scripts PHP
 
 ### Etapa 1:
-![mpm](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-main.jpg)
+![mpm](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php_main.jpg)
 
 #### Instalar dependencias
 ```
@@ -19,7 +19,7 @@ Com o arquivo aberto, digite `ctr+w` e pesquise essa linha e descomente ela:
 > LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
 
 Ficando assim:
-![Carregar biblioteca mod_mpm_prefork.iso](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-prefork-module.jpg)
+![Carregar biblioteca mod_mpm_prefork.iso](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php_prefork_module.jpg)
 
 
 Digite `ctr+w` e pesquise essa linha e comente ela:
