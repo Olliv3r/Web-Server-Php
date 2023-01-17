@@ -125,4 +125,4 @@ termux-open-url http://localhost:8080
 ```
 
 ### Configurar o phpmyadmin pra rodar no apache
-<a href="">Configurar o phpmyadmin</a>
+<a href="https://github.com/Olliv3r/Web-Server-Mysql">Configurar o phpmyadmin</a>
