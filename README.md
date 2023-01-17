@@ -120,3 +120,6 @@ E acesse
 ```
 termux-open-url http://localhost:8080
 ```
+
+### Configurar o phpmyadmin pra rodar no apache
+<a href="">Configurar o phpmyadmin</a>
