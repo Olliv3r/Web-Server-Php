@@ -1,6 +1,9 @@
 # Web Server Php
 Configura o apache pra rodar scripts PHP
 
+## Etapa necessária:
+<a href="https://github.com/Olliv3r/Web-Server">Configurar apache pra rodar com certificado</a>
+
 ### Etapa 1:
 ![mpm](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php_main.jpg)
 
