@@ -94,7 +94,7 @@ Ficando assim:
 
 Salve o arquivo digitando `ctr+x+y` e enter
 
-Inicie o apache2 com `apachectl -k start`, abra o link `http://localhost:8080` e clica no index.php que aparecerá no navegador
+Reinicie o apache com `apachectl -k restart` ou `apachectl -k start` caso estiver parado, abra o link `http://localhost:8080` e clica no index.php que aparecerá no navegador
 
 #### Carregar o index.php por padrão
 ![Index.html](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/php-index.html.jpg)
