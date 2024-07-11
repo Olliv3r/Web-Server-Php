@@ -77,10 +77,9 @@ Agora navegue até a pasta `/sdcard/htdocs` onde o apache usa pra executar os pr
 cd /sdcard/htdocs
 ```
 
-Renomeie o `index.html` para `index.php` e abra ele
+Crie o arquivo `index.php`:
 ```
-mv index.html index.php
-nano index.php
+nano /sdcard/hdocs/index.php
 ```
 
 Adicione qualquer comando PHP neste arquivo, vou adicionar apenas `phpinfo();` para testar
