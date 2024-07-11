@@ -72,9 +72,9 @@ Crie um arquivo chamado `php_module.conf`
 touch $PREFIX/etc/apache2/extra/php_module.conf
 ```
 
-Agora navegue até a pasta `htdocs` do apache
+Agora navegue até a pasta `/sdcard/htdocs` onde o apache usa pra executar os projetos:
 ```
-cd $PREFIX/share/apache2/default-site/htdocs
+cd /sdcard/htdocs
 ```
 
 Renomeie o `index.html` para `index.php` e abra ele
