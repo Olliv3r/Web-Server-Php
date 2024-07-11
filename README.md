@@ -124,5 +124,42 @@ E acesse
 termux-open-url http://localhost:8080
 ```
 
+#### Configurar o arquivo *htaccess* no apache (Opcional)
+
+Abra o arquivo `httpd.conf` do apache:
+```
+nano $PREFIX/etc/apache2/httpd.conf
+```
+Pressione `ctrl+w` e pesquise esta linha `LoadModule rewrite_module libexec/apache2/mod_rewrite.so` e a descomente, ficando assim:
+![mpm](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/mod_rewrite.jpg)
+
+Agora pressione `ctrl+w` e pesquise por esta linha `AllowOverride None` e altere de `None` para `All`, ficando assim:
+![mpm](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/allowOverRide.jpg)
+
+Salve e com `ctrl+x+y`, neste arquivo ja finalizamos.
+
+Agora vamos criar o arquivo de configuração `htaccess` no diretório dos projetos em `htdocs`, cole este bloco de códigos em um arquivo chamado `.htaccess` dentro do diretório dos projetos (Aviso: o arquivo precisa ser oculto com o ponto '.' na frente do nome):
+
+```
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+Options -Indexes
+
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+```
+
+Ficando assim:
+![mpm](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/htaccess.jpg)
+
+Pronto, agora é so testar na url algumas rotas aleatórias e ver que não haverá um erro que não encontrou a página:
+![mpm](https://github.com/Olliv3r/Web-Server-Php/blob/main/media/route_testing.jpg)
+
 ### Próxima etapa (opcional)
 <a href="https://github.com/Olliv3r/Web-Server-Mysql">Configurar o phpmyadmin pra rodar no apache</a>
